@@ -9,7 +9,7 @@ const Wrapper = styled.div`
     display: flex;
     gap: 10px;
     flex-direction: column;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
 `;
 
 export interface ITweet {

@@ -12,6 +12,11 @@ const Wrapper = styled.div`
   max-width: 860px;
 `;
 
+// const Logo = styled.div`
+//   padding: 30px;
+//   color: white;
+// `;
+
 const Menu = styled.div`
   display: flex;
   flex-direction: column;
@@ -25,8 +30,10 @@ const MenuItem = styled.div`
   align-items: center;
   justify-content: center;
   border: 2px solid white;
+  color: white;
   height: 50px;
   width: 50px;
+  font-weight: 600;
   border-radius: 50%;
   svg {
     width: 30px;
@@ -48,10 +55,13 @@ export default function Layout() {
       await auth.signOut();
       navigate("/login");
     }
-  } 
+  }
   return (
     <Wrapper>
       <Menu>
+        {/* <Logo>
+      
+        </Logo> */}
         <Link to="/">
           <MenuItem>
             <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -60,11 +70,11 @@ export default function Layout() {
           </MenuItem>
         </Link>
         <Link to="/profile">
-        <MenuItem>
-          <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M10 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM3.465 14.493a1.23 1.23 0 0 0 .41 1.412A9.957 9.957 0 0 0 10 18c2.31 0 4.438-.784 6.131-2.1.43-.333.604-.903.408-1.41a7.002 7.002 0 0 0-13.074.003Z" />
-          </svg>
-        </MenuItem>
+          <MenuItem>
+            <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M10 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM3.465 14.493a1.23 1.23 0 0 0 .41 1.412A9.957 9.957 0 0 0 10 18c2.31 0 4.438-.784 6.131-2.1.43-.333.604-.903.408-1.41a7.002 7.002 0 0 0-13.074.003Z" />
+            </svg>
+          </MenuItem>
         </Link>
 
         <MenuItem onClick={onLogOut} className="log-out">
